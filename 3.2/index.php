@@ -36,10 +36,10 @@ if (isset($_GET['name'])) {
 <main>
     <h2>Список товарів</h2>
     <ul>
-        <?php foreach ($products as $product): ?>
+                <?php foreach ($products as $name => $price): ?>
             <li>
-                <?php echo $product[0]; ?> - <?php echo $product[1]; ?> грн
-                <a href="index.php?name=<?php echo urlencode($product[0]); ?>">Додати в кошик</a>
+                <?php echo $name; ?> - <?php echo $price; ?> грн
+                <a href="index.php?name=<?php echo urlencode($name); ?>">Додати в кошик</a>
             </li>
         <?php endforeach; ?>
     </ul>
